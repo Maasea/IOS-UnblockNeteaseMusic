@@ -1,6 +1,7 @@
 # IOS-UnblockNeteaseMusic
 
 原项目地址: https://github.com/nondanee/UnblockNeteaseMusic 
+Goproxy控制面板：https://github.com/snail007/proxy_admin_free/blob/master/README_ZH.md
 
 详细参考链接
 
@@ -104,43 +105,13 @@ http-proxy: `你的域名:6666`
 
 #### 需要完成以上http的搭建，不可跳过直接进行ss转发
 
-## 4. 安装screen窗口
+## 4. 使用Goproxy 控制面板实现转发
+下载并安装
 ```
-yum install screen
-
-screen -S glider  #新建一个窗口
+curl -L https://raw.githubusercontent.com/snail007/proxy_admin_free/master/install_auto.sh | bash
 ```
-## 5.使用glider转发
-```
-wget -N --no-check-certificate https://github.com/nadoo/glider/releases/download/v0.7.0/glider-v0.7.0-linux-amd64.tar.gz
-
-tar zxvf glider-v0.7.0-linux-amd64.tar.gz && cd glider-v0.7.0-linux-amd64
-
-vi glider.conf
-```
-按 `i` 输入以下内容
-```
-#开启调试模式,输出log
-verbose=True
-#ss的监听端口
-listen=ss://CHACHA20-IETF:password@:8888
-#网易云音乐解锁代理的端口
-forward=http://127.0.0.1:6666
-#ss可以改成自己想要的加密方式密码和端口
-```
-切换英文输入法 按` Esc `然后输入`:wq!` 回车保存
-
-## 6.运行 glider
-```
-chmod 777 glider && ./glider -config glider.conf
-```
-按ctrl +a  再按d 让此页面挂在后台
-
-
-在代理工具中配置Shadowsocks，以`glider.conf` 为准
-
-ss://CHACHA20-IETF:password@:8888
- 
+ 访问页面进行代理转发设置
+ >打开浏览器访问：http://IP:32080 , 首次默认账号是root，密码是123，登录后记得第一时间修改。
 ### 完成后 http-proxy & shadowsocks 皆可以使用
 
 以 Quantumult X 配置为例
