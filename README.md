@@ -1,21 +1,7 @@
 # IOS-UnblockNeteaseMusic
 
-原项目地址: https://github.com/nondanee/UnblockNeteaseMusic 
+以下以 CentOS 7为参照系统
 
-Goproxy控制面板：https://github.com/snail007/proxy_admin_free/blob/master/README_ZH.md
-
-详细参考链接
-
-https://www.moerats.com/archives/938/
-
-https://www.lajiblog.com/index.php/archives/4/
-
-https://github.com/nondanee/UnblockNeteaseMusic/issues/65
-
-
-为了简洁以下以 CentOS 7为参照系统
-
-如需详细配置，查阅以上链接
 
 # 准备
 
@@ -138,3 +124,16 @@ ip-cidr, 115.236.118.0/24, NeteaseMusic
 ip-cidr, 223.252.199.0/24, NeteaseMusic
 host-keyword, netease, NeteaseMusic
 ```
+# 参考
+
+原项目地址: https://github.com/nondanee/UnblockNeteaseMusic 
+
+Goproxy控制面板：https://github.com/snail007/proxy_admin_free/blob/master/README_ZH.md
+
+参考链接
+
+https://www.moerats.com/archives/938/
+
+https://www.lajiblog.com/index.php/archives/4/
+
+https://github.com/nondanee/UnblockNeteaseMusic/issues/65
